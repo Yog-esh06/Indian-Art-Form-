@@ -1,3 +1,4 @@
+
 <div align="center">
   <a href="https://yog-esh06.github.io/Indian-Art-Form-/">
     <img src="https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=45&duration=3000&pause=1000&color=E2725B&center=true&vCenter=true&width=800&height=100&lines=INDIAN+ART+FORM;A+Journey+Through+Heritage;Discover+The+Past" alt="INDIAN ART FORM | A Journey Through Heritage | Discover The Past">
@@ -12,7 +13,9 @@
 
 ## 📌 Project Showcase
 
-![Colorful Indian-inspired artistic details](https://images.unsplash.com/photo-1582561424762-38b8be63d915?w=1200)
+<div align="center">
+  <img src="https://picsum.photos/1200/500?random=1" alt="Colorful Indian-inspired artistic details" width="100%">
+</div>
 
 ---
 
@@ -21,16 +24,15 @@
 | 1. Chronological Timeline | 2. Geographical Art Map |
 | :---: | :---: |
 | An interactive journey through landmark periods, from the Indus Valley to the Mughal era. Select an artifact to explore its history, materials, and cultural context. | Explore regional traditions using interactive custom markers, highlighted locations, dynamic region navigation, and switchable map appearances. |
-| ![Traditional artwork detail](https://images.unsplash.com/photo-1604871000636-074fa5117945?w=600) | ![Map and regional exploration](https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600) |
+| <img src="https://picsum.photos/600/400?random=2" alt="Traditional artwork detail" width="100%"> | <img src="https://picsum.photos/600/400?random=3" alt="Map and regional exploration" width="100%"> |
 
 <br>
 
 <div align="center">
   <h3>3. Regional Painting Fusion Studio</h3>
   <p>A generative HTML5 Canvas composition blending Warli geometry with Kalamkari floral motifs. Render new procedural variations and export an A4 collage PDF complete with artwork iterations and team metadata.</p>
+  <img src="https://picsum.photos/1200/500?random=4" alt="Generative art and colorful canvas motifs" width="100%">
 </div>
-
-![Generative art and colorful canvas motifs](https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?w=1200)
 
 ---
 
@@ -120,3 +122,6 @@ Then open `http://localhost:8000` in your web browser.
 | **PRAKARSH AWASTHI** | RA2411003010737 |
 | **ARIEVE BALORIA** | RA2411003010743 |
 
+```
+
+```
