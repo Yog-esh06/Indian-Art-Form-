@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a1817">
+  <meta name="description" content="Explore regional Indian art traditions on an interactive map.">
+  <title>Geographical Heritage — Indian Art Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+  <main class="map-shell">
+    <div id="art-map" role="application" aria-label="Map of Indian art traditions"></div>
+    <a class="map-brand" href="index.html"><span class="brand-mark">A</span><span>Art Through Time</span></a>
+    <aside class="map-panel" aria-labelledby="map-title">
+      <p class="panel-kicker"><span></span> Place &amp; practice</p>
+      <h1 id="map-title">Geographical<br>Heritage of <em>Indian Art</em></h1>
+      <p class="panel-instruction">Click map markers to explore regional styles.</p>
+      <div class="panel-rule"></div>
+      <p class="panel-footnote"><span class="marker-key"></span> Four traditions, rooted in place</p>
+    </aside>
+    <nav class="map-nav" aria-label="Experiences">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light map mode">
+        <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+        <span id="theme-toggle-label">Light mode</span>
+      </button>
+      <a href="timeline.html">Timeline</a>
+      <a class="active" href="map.html" aria-current="page">Art map</a>
+      <a href="fusion.html">Studio</a>
+    </nav>
+    <nav class="region-sidebar" aria-labelledby="region-nav-title">
+      <p class="sidebar-kicker">Field guide</p>
+      <h2 id="region-nav-title">Explore regions</h2>
+      <p class="sidebar-instruction">Choose a marker to travel to its art tradition.</p>
+      <div class="region-list">
+        <button class="region-button" type="button" data-region="Maharashtra" aria-pressed="false">
+          <span class="region-number">01</span><span class="region-copy"><strong>Maharashtra</strong><small>Ajanta Caves</small></span><span class="region-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="region-button" type="button" data-region="Andhra Pradesh" aria-pressed="false">
+          <span class="region-number">02</span><span class="region-copy"><strong>Andhra Pradesh</strong><small>Kalamkari</small></span><span class="region-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="region-button" type="button" data-region="Tamil Nadu" aria-pressed="false">
+          <span class="region-number">03</span><span class="region-copy"><strong>Tamil Nadu</strong><small>Tanjore Painting</small></span><span class="region-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="region-button" type="button" data-region="Rajasthan" aria-pressed="false">
+          <span class="region-number">04</span><span class="region-copy"><strong>Rajasthan</strong><small>Rajput Miniatures</small></span><span class="region-arrow" aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <div class="sidebar-foot"><span class="sidebar-marker-key"></span><span>Regional art traditions</span></div>
+    </nav>
+    <div class="map-credit">Map data <span>·</span> OpenStreetMap contributors</div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="map.js"></script>
+</body>
+</html>

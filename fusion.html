@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211e1b">
+  <meta name="description" content="Make a generative painting inspired by Warli geometry and Kalamkari floral forms.">
+  <title>Living Patterns — Regional Painting Fusion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fusion.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="fusion.js" defer></script>
+</head>
+<body>
+  <header class="studio-header">
+    <a class="wordmark" href="index.html"><span class="wordmark-mark">A</span> Art Through Time</a>
+    <nav class="studio-nav" aria-label="Experiences">
+      <a href="timeline.html">Timeline</a>
+      <a href="map.html">Art map</a>
+      <a class="active" href="fusion.html" aria-current="page">Studio</a>
+    </nav>
+    <span class="edition-label">Open studio <span>·</span> No. 01</span>
+  </header>
+
+  <main class="studio-main">
+    <section class="studio-intro" aria-labelledby="studio-title">
+      <p class="eyebrow"><span></span> An experiment in form</p>
+      <h1 id="studio-title">Living <em>patterns</em></h1>
+      <p>Two traditions meet on one canvas. Click the painting—or make a new one—to bring the lines to life.</p>
+    </section>
+    <section class="canvas-stage" aria-label="Generative art studio">
+      <div class="canvas-frame">
+        <canvas id="fusion-canvas" width="800" height="600" aria-label="Generative artwork inspired by Warli and Kalamkari"></canvas>
+      </div>
+      <div class="studio-controls">
+        <button id="generate-button" type="button"><span class="button-icon" aria-hidden="true">↻</span> Generate Synthesis</button>
+        <button id="download-pdf-button" type="button">Download PDF</button>
+        <span class="canvas-hint">Or click anywhere on the canvas</span>
+      </div>
+      <p class="pdf-status" id="pdf-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="style-notes" aria-label="Art traditions in this synthesis">
+      <article><span class="note-number">01</span><div><h2>Warli</h2><p>Rhythm in line, circle and triangle.</p></div></article>
+      <span class="note-join" aria-hidden="true">+</span>
+      <article><span class="note-number">02</span><div><h2>Kalamkari</h2><p>Vines and stories drawn by hand.</p></div></article>
+    </section>
+  </main>
+  <footer class="studio-footer"><span>Made for the curious.</span><span>A study in Indian art forms</span></footer>
+</body>
+</html>
