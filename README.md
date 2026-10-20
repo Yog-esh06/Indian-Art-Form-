@@ -1,5 +1,4 @@
 
-```markdown
 <div align="center">
   <a href="https://yog-esh06.github.io/Indian-Art-Form-/">
     <img src="https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=45&duration=3000&pause=1000&color=E2725B&center=true&vCenter=true&width=800&height=100&lines=INDIAN+ART+FORM;A+Journey+Through+Heritage;Discover+The+Past" alt="INDIAN ART FORM | A Journey Through Heritage | Discover The Past">
