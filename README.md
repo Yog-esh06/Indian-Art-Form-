@@ -11,28 +11,22 @@
   <br><br>
 </div>
 
-## 📌 Project Showcase
+## 📌 Project Overview
 
-<div align="center">
-  <img src="https://picsum.photos/1200/500?random=1" alt="Colorful Indian-inspired artistic details" width="100%">
-</div>
+An interactive digital web application designed to showcase Indian art history across different time periods, geographical regions, and traditional generative art forms.
 
 ---
 
 ## 🎨 Modules and Features
 
-| 1. Chronological Timeline | 2. Geographical Art Map |
-| :---: | :---: |
-| An interactive journey through landmark periods, from the Indus Valley to the Mughal era. Select an artifact to explore its history, materials, and cultural context. | Explore regional traditions using interactive custom markers, highlighted locations, dynamic region navigation, and switchable map appearances. |
-| <img src="https://picsum.photos/600/400?random=2" alt="Traditional artwork detail" width="100%"> | <img src="https://picsum.photos/600/400?random=3" alt="Map and regional exploration" width="100%"> |
+### 1. Chronological Timeline
+An interactive journey through landmark periods, from the Indus Valley to the Mughal era. Select an artifact to explore its history, materials, and cultural context.
 
-<br>
+### 2. Geographical Art Map
+Explore regional traditions using interactive custom markers, highlighted locations, dynamic region navigation, and switchable map appearances powered by Leaflet.
 
-<div align="center">
-  <h3>3. Regional Painting Fusion Studio</h3>
-  <p>A generative HTML5 Canvas composition blending Warli geometry with Kalamkari floral motifs. Render new procedural variations and export an A4 collage PDF complete with artwork iterations and team metadata.</p>
-  <img src="https://picsum.photos/1200/500?random=4" alt="Generative art and colorful canvas motifs" width="100%">
-</div>
+### 3. Regional Painting Fusion Studio
+A generative HTML5 Canvas composition blending Warli geometry with Kalamkari floral motifs. Render new procedural variations and export an A4 collage PDF complete with artwork iterations and team metadata.
 
 ---
 
