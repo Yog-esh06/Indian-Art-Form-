@@ -210,33 +210,20 @@ function generateSynthesis() {
 function downloadArtworkPdf() {
   downloadPdfButton.disabled = true;
   pdfStatus.textContent = "Preparing your artwork…";
-  let artworkSnapshot = null;
-  let artworkWasRestored = false;
-  let resumeAnimation = false;
+  let capturedArtwork = false;
+  let animationRestarted = false;
 
   try {
-    const imgData1 = canvas.toDataURL('image/png', 1.0);
-    artworkSnapshot = document.createElement("canvas");
-    artworkSnapshot.width = width;
-    artworkSnapshot.height = height;
-    artworkSnapshot.getContext("2d").drawImage(canvas, 0, 0);
-
-    resumeAnimation = animationFrame !== 0;
-    if (resumeAnimation) {
-      window.cancelAnimationFrame(animationFrame);
-      animationFrame = 0;
-    }
-
-    drawArtwork(1, randomBetween(0, Math.PI * 2));
-    const imgData2 = canvas.toDataURL('image/png', 1.0);
-
-    ctx.clearRect(0, 0, width, height);
-    ctx.drawImage(artworkSnapshot, 0, 0);
-    artworkWasRestored = true;
-
     if (!window.jspdf?.jsPDF) {
       throw new Error("The PDF library could not be loaded. Check your internet connection and try again.");
     }
+
+    const imgData1 = canvas.toDataURL('image/jpeg', 1.0);
+    capturedArtwork = true;
+    drawArtwork(1, randomBetween(0, Math.PI * 2));
+    const imgData2 = canvas.toDataURL('image/jpeg', 1.0);
+    generateSynthesis();
+    animationRestarted = true;
 
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF('p', 'mm', 'a4');
@@ -293,8 +280,8 @@ function downloadArtworkPdf() {
     doc.setFillColor(239, 232, 220);
     doc.roundedRect(13, 98, 89, 68.5, 2, 2, "F");
     doc.roundedRect(108, 98, 89, 68.5, 2, 2, "F");
-    doc.addImage(imgData1, "PNG", 15, 100, variationWidth, variationHeight);
-    doc.addImage(imgData2, "PNG", 110, 100, variationWidth, variationHeight);
+    doc.addImage(imgData1, 'JPEG', 15, 100, 85, 63.75);
+    doc.addImage(imgData2, 'JPEG', 110, 100, 85, 63.75);
     doc.setDrawColor(212, 175, 55);
     doc.setLineWidth(0.35);
     doc.roundedRect(15, 100, variationWidth, variationHeight, 1, 1, "S");
@@ -342,11 +329,7 @@ function downloadArtworkPdf() {
       ? `PDF export failed: ${error.message}`
       : "PDF export failed. Please try again.";
   } finally {
-    if (artworkSnapshot && !artworkWasRestored) {
-      ctx.clearRect(0, 0, width, height);
-      ctx.drawImage(artworkSnapshot, 0, 0);
-    }
-    if (resumeAnimation && !animationFrame) {
+    if (capturedArtwork && !animationRestarted) {
       generateSynthesis();
     }
     downloadPdfButton.disabled = false;

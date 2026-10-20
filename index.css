@@ -104,3 +104,57 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* Readability scale */
+body { font-size: 16px; }
+.portal-header { min-height: 76px; }
+.portal-edition { font-size: 14px; }
+.hero { padding-top: clamp(62px, 8vw, 100px); }
+.hero h1 { font-size: clamp(64px, 11.5vw, 140px); }
+.eyebrow { font-size: 14px; letter-spacing: .16em; }
+.mentor-attribution { margin-top: 27px; font-size: 15px; }
+.hero-description { max-width: 540px; font-size: 16px; line-height: 1.7; }
+.team-section { margin-top: 32px; }
+.section-label { margin-bottom: 12px; }
+.section-label h2 { font-size: 18px; }
+.section-label > span { font-size: 14px; }
+.team-list li { gap: 7px; padding: 17px 14px; }
+.member-name { font-size: 13px; letter-spacing: 0; }
+.member-id { font-size: 13px; letter-spacing: 0; }
+.projects-section { margin-top: 60px; }
+.projects-heading { margin-bottom: 22px; }
+.projects-heading .eyebrow { font-size: 14px; }
+.projects-heading h2 { font-size: clamp(32px, 4vw, 42px); }
+.projects-heading > p { max-width: 270px; font-size: 14px; line-height: 1.65; }
+.project-grid { gap: 18px; }
+.project-card { min-height: 300px; padding: 27px 25px 24px; }
+.card-number { font-size: 14px; }
+.card-icon { margin-top: 23px; }
+.card-title { margin-top: 16px; font-size: 25px; }
+.card-description { max-width: 290px; margin-top: 12px; font-size: 15px; line-height: 1.6; }
+.card-link { padding-top: 20px; font-size: 14px; }
+.portal-footer { margin-top: 42px; padding: 17px 0 23px; font-size: 14px; }
+
+@media (max-width: 760px) {
+  .portal-header { min-height: 68px; }
+  .hero { padding-top: 62px; }
+  .team-list li { padding: 15px 13px; }
+  .projects-section { margin-top: 48px; }
+  .project-grid { gap: 14px; }
+  .project-card { min-height: 250px; padding: 23px; }
+  .card-description { max-width: 520px; }
+}
+
+@media (max-width: 420px) {
+  .portal-edition { font-size: 14px; }
+  .hero h1 { font-size: clamp(55px, 15vw, 68px); }
+  .mentor-attribution { font-size: 14px; }
+  .eyebrow { font-size: 14px; }
+  .section-label > span { font-size: 14px; }
+  .team-list li { padding: 13px 10px; }
+  .member-name { font-size: 13px; }
+  .member-id { font-size: 13px; }
+  .projects-heading > p { font-size: 14px; }
+  .project-card { min-height: 245px; padding: 20px; }
+  .portal-footer { gap: 12px; font-size: 14px; }
+}

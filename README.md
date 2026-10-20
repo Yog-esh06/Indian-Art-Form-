@@ -1,79 +1,93 @@
-# Indian Art Form
+<div align="center">
+  <a href="https://yog-esh06.github.io/Indian-Art-Form-/">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=45&duration=3000&pause=1000&color=E2725B&center=true&vCenter=true&width=800&height=100&lines=INDIAN+ART+FORM;A+Journey+Through+Heritage;Discover+The+Past" alt="INDIAN ART FORM — A Journey Through Heritage — Discover The Past" />
+  </a>
 
-> **Live Demo:** [Open the Indian Art Form portal](https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/)
+  <p><em>An interactive digital exploration of Indian Art History, featuring a chronological timeline, geographical mapping, and generative canvas synthesis.</em></p>
 
-## About
+  <a href="https://yog-esh06.github.io/Indian-Art-Form-/"><strong>🌍 Explore the Live Project »</strong></a>
 
-Indian Art Form is a small, accessible digital portal for exploring the visual heritage of the Indian subcontinent. It brings together a chronological timeline, a regional map and a generative canvas study in a single static website. Each experience is designed to encourage exploration while presenting historical context, artistic materials and regional practice.
+  <br><br>
+</div>
 
-The site is built as a framework-free collection of HTML pages and browser-native CSS and JavaScript. `index.html` is the root landing page and links to the three project experiences.
+## 🎥 Project Showcase
 
-## Experiences
+> **Note:** Replace the image below with an animated demo GIF or video when one is available.
 
-### 1. Interactive Historical Timeline
+<div align="center">
+  <img src="https://via.placeholder.com/900x500/211e1b/e2725b?text=Drop+Your+Animated+Demo+GIF+Here" alt="Project demo preview placeholder" width="100%">
+</div>
 
-The timeline presents four landmark moments in Indian art history: the Indus Valley Civilization, the Mauryan Empire, the Gupta period and the Mughal era. Select a timeline node to open an illustrated detail panel with historical context and material notes.
+<br>
 
-### 2. Geographical Heritage of Indian Art
+## 📸 Modules & Features
 
-The full-screen interactive map locates four regional traditions: Ajanta Caves in Maharashtra, Kalamkari in Andhra Pradesh, Tanjore painting in Tamil Nadu and Rajput miniatures in Rajasthan. Visitors can select map markers or the region guide to navigate the map and open an illustrated placard. Regional highlight circles show the geographical context around each marker.
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%">
+        <h3 align="center">1. Chronological Timeline</h3>
+        <p align="center">An interactive, horizontally scrolling journey detailing key artifacts from the Indus Valley to the Mughal Era with illustrated nodes and historical context.</p>
+        <img src="https://via.placeholder.com/500x300/211e1b/d4af37?text=Timeline+Screenshot" alt="Timeline screenshot placeholder" width="100%">
+      </td>
+      <td width="50%">
+        <h3 align="center">2. Geographical Art Map</h3>
+        <p align="center">A cinematic Leaflet map with dark and light themes, glowing markers, regional highlights and an interactive region guide.</p>
+        <img src="https://via.placeholder.com/500x300/211e1b/d4af37?text=Map+Screenshot" alt="Map screenshot placeholder" width="100%">
+      </td>
+    </tr>
+  </table>
+</div>
 
-### 3. Regional Painting Fusion
+<div align="center">
+  <h3>3. Regional Painting Fusion Studio</h3>
+  <p>A generative HTML5 Canvas engine that synthesizes Warli geometry with Kalamkari floral motifs. Includes a jsPDF export that creates an A4 submission collage with two artwork variations and the team roster.</p>
+  <img src="https://via.placeholder.com/900x400/211e1b/e2725b?text=Fusion+Studio+Screenshot" alt="Fusion studio screenshot placeholder" width="100%">
+</div>
 
-The generative studio combines Warli-inspired geometric figures and borders with Kalamkari-inspired floral vines, drawn with the HTML5 Canvas API. Generate a new composition from the button or the canvas. Export a portrait A4 PDF collage featuring two variations, notes about both traditions and the project team roster.
+## 🛠️ Tech Stack
 
-## Technology
+- **Core:** Vanilla HTML5, CSS3 (Flexbox, Grid and keyframe animation), and ES6 JavaScript
+- **Graphics:** HTML5 Canvas API
+- **Libraries:** [Leaflet.js](https://leafletjs.com/) for mapping and [jsPDF](https://parall.ax/products/jspdf) for PDF export
+- **Map tiles:** OpenStreetMap contributors, with a CSS-based dark appearance and light-mode option
 
-- **HTML5** for semantic, accessible page structure.
-- **CSS3** for responsive layouts, visual styling, animation and reduced-motion support.
-- **Vanilla ES6 JavaScript** for page interactions and generative drawing.
-- **Leaflet** for the interactive map and marker popups.
-- **OpenStreetMap and CARTO** for map tiles and geographic data attribution.
-- **jsPDF** for client-side PDF creation.
-
-Leaflet, jsPDF, web fonts, map tiles and photographic images are loaded from external services. An internet connection is needed for those resources; the local pages and canvas drawing are otherwise static browser code.
-
-## Project structure
+## 📂 Architecture
 
 ```text
-Indian Art Form/
-├── index.html       # GitHub Pages entry point and project portal
-├── index.css
-├── timeline.html
-├── timeline.css
-├── timeline.js
-├── map.html
-├── map.css
-├── map.js
-├── fusion.html
-├── fusion.css
-├── fusion.js
-└── README.md
+Indian-Art-Form-/
+├── index.html          # Main portal and navigation
+├── index.css           # Portal layout and typography
+├── timeline.html       # Interactive historical timeline
+├── timeline.css        # Timeline styles
+├── timeline.js         # Timeline content and modal interactions
+├── map.html            # Leaflet regional art map
+├── map.css             # Map themes, sidebar and popup styles
+├── map.js              # Map layers, markers and region navigation
+├── fusion.html         # Generative canvas studio
+├── fusion.css          # Fusion studio styles
+├── fusion.js           # Canvas artwork and jsPDF collage export
+└── README.md           # Project documentation
 ```
 
-All page assets are referenced with relative paths. Keep these files together in the published directory so navigation works on both a repository project site and a custom domain.
+## 🚀 GitHub Pages Deployment
 
-## Deploy with GitHub Pages
+1. Push the project files to the root of the GitHub repository. Keep the HTML, CSS and JavaScript files together.
+2. Confirm that `index.html` is in the repository root. GitHub Pages serves this file as the portal entry page.
+3. Open **Settings → Pages** in the repository.
+4. Under **Build and deployment**, select **Deploy from a branch**.
+5. Choose the publishing branch (for example, `main`) and the `/ (root)` folder, then save.
+6. Wait for the Pages deployment to finish. The site URL should be `https://yog-esh06.github.io/Indian-Art-Form-/`.
+7. Open the live URL and test each portal link, the map tiles and region controls, and PDF export.
 
-1. Push this project directory to the root of a GitHub repository. Confirm that `index.html` is in the repository root (or in the selected Pages publishing directory); GitHub Pages uses it as the site's entry page.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the deployment branch (commonly `main`) and the `/ (root)` folder, then select **Save**.
-5. Wait for the Pages deployment to complete. The published site URL is usually `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
-6. Replace the Live Demo placeholder at the top of this README with the deployed URL.
-7. Open the published portal and verify the three relative navigation links. Also test the map and PDF export, which depend on external CDN and tile/image services.
+This is a static site: no package installation, build step or server-side runtime is required. The site uses relative links so its pages work when published together. Leaflet, jsPDF, fonts, map tiles and Unsplash images load from external services and therefore require an internet connection.
 
-No package install, build command or server-side runtime is required. The HTML pages may also be opened directly from a local folder; online resources require an internet connection.
+## 👨‍💻 Team Roster
 
-## Historical and image notes
-
-The timeline and map provide concise introductions rather than a comprehensive survey. Dates, attributions and techniques are presented with appropriate qualifiers where evidence is incomplete or traditions span multiple periods. Photography is illustrative and served by Unsplash; it should not be interpreted as a verified photograph of the named historical object or site.
-
-## Team
-
-- **YOGESH R MEHTA** — RA2411003010776
-- **DARSH M SARAF** — RA2411003010731
-- **MINK RANGA** — RA2411003010717
-- **PRAKARSH AWASTHI** — RA2411003010737
-- **ARIEVE BALORIA** — RA2411003010743
-
+| Name | Registration Number |
+|---|---|
+| **YOGESH R MEHTA** | RA2411003010776 |
+| **DARSH M SARAF** | RA2411003010731 |
+| **MINK RANGA** | RA2411003010717 |
+| **PRAKARSH AWASTHI** | RA2411003010737 |
+| **ARIEVE BALORIA** | RA2411003010743 |

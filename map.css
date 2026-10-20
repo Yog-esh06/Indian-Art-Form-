@@ -159,3 +159,81 @@ body.light-mode .leaflet-control-zoom a:hover { background: #f0e8dc !important; 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Readability scale */
+body { font-size: 16px; }
+.map-brand { font-size: 15px; }
+.map-panel { padding: 30px 30px 25px; }
+.panel-kicker, .sidebar-kicker { margin-bottom: 18px; font-size: 12px; }
+.map-panel h1 { font-size: clamp(34px, 3.4vw, 42px); }
+.panel-instruction { margin-top: 16px; font-size: 15px; line-height: 1.65; }
+.panel-rule { margin: 21px 0 16px; }
+.panel-footnote { font-size: 13px; }
+.map-nav { gap: 7px; padding: 7px; }
+.map-nav a { padding: 10px 13px; font-size: 15px; }
+.theme-toggle { min-height: 40px; gap: 8px; padding: 0 12px; font-size: 14px; }
+.theme-toggle-icon { font-size: 17px; }
+.panel-kicker, .sidebar-kicker { font-size: 14px; }
+.panel-footnote { font-size: 14px; }
+.region-sidebar { padding: 26px 23px 21px; }
+.region-sidebar h2 { font-size: 29px; }
+.sidebar-instruction { margin: 9px 0 17px; font-size: 14px; line-height: 1.55; }
+.region-list { gap: 7px; }
+.region-button { grid-template-columns: 31px minmax(0, 1fr) 19px; gap: 11px; min-height: 62px; padding: 10px 11px; }
+.region-number { font-size: 16px; }
+.region-copy { gap: 4px; }
+.region-copy strong { font-size: 14px; }
+.region-copy small { font-size: 14px; }
+.region-arrow { font-size: 16px; }
+.sidebar-foot { margin-top: 17px; padding-top: 14px; font-size: 14px; }
+.map-credit { padding: 7px 10px; font-size: 14px; }
+.leaflet-popup-content { width: 310px !important; }
+.placard { padding: 16px; }
+.placard img { height: 145px; margin-bottom: 15px; }
+.placard-region { font-size: 14px; }
+.placard h2 { font-size: 27px; }
+.placard-description { margin: 11px 0 13px; font-size: 14px; line-height: 1.6; }
+.placard-technique { padding-top: 11px; font-size: 14px; line-height: 1.6; }
+.leaflet-control-attribution { font-size: 12px !important; }
+.region-label { font-size: 14px; }
+
+@media (max-width: 760px) {
+  .map-brand { font-size: 14px; }
+  .map-nav { top: 54px; right: 12px; left: 12px; justify-content: flex-end; gap: 4px; padding: 5px; }
+  .map-nav a { padding: 9px 8px; font-size: 15px; }
+  .theme-toggle { min-height: 36px; gap: 5px; padding: 0 8px; font-size: 14px; }
+  .theme-toggle-icon { font-size: 15px; }
+  .map-panel { top: 109px; left: 14px; width: min(310px, calc(100vw - 28px)); padding: 19px 20px 17px; }
+  .map-panel h1 { font-size: 31px; }
+  .panel-kicker, .sidebar-kicker { margin-bottom: 9px; font-size: 14px; }
+  .panel-instruction { margin-top: 9px; font-size: 14px; }
+  .panel-rule { margin: 12px 0 10px; }
+  .panel-footnote { font-size: 14px; }
+  .region-sidebar { top: auto; right: 12px; bottom: 31px; left: 12px; width: auto; padding: 15px 16px 12px; }
+  .region-sidebar h2 { font-size: 22px; }
+  .sidebar-instruction { margin: 5px 0 10px; font-size: 14px; }
+  .region-list { gap: 5px; }
+  .region-button { grid-template-columns: 24px minmax(0, 1fr) 14px; gap: 7px; min-height: 51px; padding: 7px; }
+  .region-number { font-size: 14px; }
+  .region-copy strong { font-size: 14px; }
+  .region-copy small { font-size: 14px; }
+  .region-arrow { font-size: 16px; }
+  .sidebar-foot { margin-top: 9px; padding-top: 8px; font-size: 14px; }
+  .map-credit { right: 7px; bottom: 8px; font-size: 14px; }
+  .leaflet-popup-content { width: min(300px, 72vw) !important; }
+}
+
+@media (max-width: 390px) {
+  .map-brand { font-size: 14px; }
+  .map-nav { top: 52px; right: 8px; left: 8px; }
+  .map-nav a { padding: 8px 5px; font-size: 15px; }
+  .theme-toggle { gap: 4px; padding: 0 6px; font-size: 14px; }
+  .map-panel { top: 101px; }
+  .map-panel h1 { font-size: 28px; }
+  .region-sidebar { bottom: 24px; padding: 12px 12px 9px; }
+  .region-sidebar h2 { font-size: 20px; }
+  .region-button { grid-template-columns: 20px minmax(0, 1fr) 12px; gap: 5px; min-height: 47px; padding: 5px; }
+  .region-copy strong { font-size: 14px; }
+  .region-copy small { font-size: 14px; }
+  .sidebar-foot { font-size: 14px; }
+}

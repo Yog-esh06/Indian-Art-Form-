@@ -108,3 +108,59 @@ button:focus-visible, a:focus-visible, .timeline-viewport:focus-visible { outlin
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Readability scale */
+body { font-size: 16px; }
+.site-header { min-height: 80px; }
+.wordmark { font-size: 15px; }
+.site-nav { gap: 30px; }
+.site-nav a { font-size: 15px; }
+.edition-label { font-size: 14px; }
+.intro { padding-top: 82px; padding-bottom: 46px; }
+.eyebrow { font-size: 14px; }
+.intro h1 { font-size: clamp(46px, 6vw, 72px); }
+.intro-copy { max-width: 620px; font-size: 16px; line-height: 1.7; }
+.scroll-hint { margin-top: 29px; font-size: 14px; }
+.timeline-track { min-width: 1120px; height: 420px; }
+.track-line { top: 50%; }
+.event-button { max-width: 245px; }
+.event-button.top { top: 10px; }
+.event-button.bottom { top: calc(50% + 2px); }
+.event-date { margin-bottom: 9px; font-size: 14px; }
+.event-name { font-size: 21px; line-height: 1.3; }
+.event-artifact { margin-top: 7px; font-size: 14px; line-height: 1.45; }
+.artifact-node { width: 112px; height: 112px; margin: 14px auto; }
+.node-symbol { font-size: 29px; }
+.event-button.top .artifact-node { margin-top: 16px; }
+.event-button.bottom .artifact-node { margin-top: 0; margin-bottom: 13px; }
+.event-button.bottom .event-date { margin-bottom: 9px; }
+.event-stem { height: 23px; }
+.timeline-controls { padding-top: 5px; }
+.timeline-count { font-size: 15px; }
+.count-caption { font-size: 14px; }
+.arrow-button, .close-button { width: 42px; height: 42px; }
+.site-footer { margin-top: 34px; padding: 19px 0; font-size: 14px; }
+.artifact-panel { padding: 62px clamp(28px, 6vw, 68px) 46px; }
+.modal-period { margin: 29px 0 10px; font-size: 14px; }
+.artifact-panel h2 { margin-bottom: 24px; font-size: clamp(36px, 5.2vw, 48px); }
+.modal-figure { margin-bottom: 29px; }
+.modal-figure figcaption { margin-top: 10px; font-size: 14px; }
+.modal-description p { margin-bottom: 16px; font-size: 16px; line-height: 1.75; }
+.panel-index { margin-top: 31px; font-size: 14px; }
+.close-button { font-size: 24px; }
+
+@media (max-width: 700px) {
+  .site-header { min-height: 70px; }
+  .site-nav { gap: 14px; }
+  .site-nav a { font-size: 15px; }
+  .intro { padding-top: 63px; padding-bottom: 34px; }
+  .intro-copy { font-size: 15px; }
+  .timeline-track { min-width: 960px; height: 390px; }
+  .event-button.top { top: 7px; }
+  .event-button.bottom { top: calc(50% + 1px); }
+  .event-date { font-size: 14px; }
+  .event-name { font-size: 20px; }
+  .event-artifact { font-size: 14px; }
+  .artifact-node { width: 98px; height: 98px; }
+  .site-footer { margin-top: 25px; }
+}

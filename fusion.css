@@ -63,3 +63,39 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Readability scale */
+body { font-size: 16px; }
+.studio-header { min-height: 78px; }
+.wordmark { font-size: 15px; }
+.studio-nav { gap: 32px; }
+.studio-nav a { font-size: 15px; }
+.edition-label { font-size: 14px; }
+.studio-main { padding-top: 46px; }
+.eyebrow { font-size: 14px; }
+.studio-intro h1 { font-size: clamp(42px, 5.5vw, 60px); }
+.studio-intro > p:last-child { max-width: 640px; font-size: 16px; line-height: 1.7; }
+.canvas-stage { margin-top: 30px; }
+.studio-controls { gap: 16px; margin-top: 20px; }
+#generate-button, #download-pdf-button { min-height: 46px; padding-right: 20px; padding-left: 20px; font-size: 15px; }
+.canvas-hint { font-size: 14px; }
+.pdf-status { min-height: 20px; margin-top: 10px; font-size: 14px; }
+.style-notes { gap: 28px; margin-top: 28px; }
+.style-notes article { gap: 13px; }
+.note-number { font-size: 20px; }
+.style-notes h2 { margin-bottom: 4px; font-size: 19px; }
+.style-notes p { font-size: 14px; line-height: 1.55; }
+.note-join { font-size: 24px; }
+.studio-footer { margin-top: 18px; padding: 17px 0; font-size: 14px; }
+
+@media (max-width: 600px) {
+  .studio-header { min-height: 70px; }
+  .studio-nav { gap: 12px; }
+  .studio-nav a { font-size: 15px; }
+  .studio-main { padding-top: 34px; }
+  .studio-intro > p:last-child { max-width: 430px; font-size: 15px; }
+  .studio-controls { flex-direction: column; gap: 11px; }
+  .style-notes { gap: 14px; }
+  .style-notes p { max-width: 160px; font-size: 14px; }
+  .studio-footer { gap: 12px; font-size: 14px; }
+}
