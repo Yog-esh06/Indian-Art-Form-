@@ -1,4 +1,3 @@
-
 <div align="center">
   <a href="https://yog-esh06.github.io/Indian-Art-Form-/">
     <img src="https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=45&duration=3000&pause=1000&color=E2725B&center=true&vCenter=true&width=800&height=100&lines=INDIAN+ART+FORM;A+Journey+Through+Heritage;Discover+The+Past" alt="INDIAN ART FORM | A Journey Through Heritage | Discover The Past">
@@ -13,36 +12,25 @@
 
 ## 📌 Project Showcase
 
-<div align="center">
-  <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1000&auto=format&fit=crop" alt="Indian artistic details and artwork" width="100%">
-</div>
+![Colorful Indian-inspired artistic details](https://images.unsplash.com/photo-1582561424762-38b8be63d915?w=1200)
 
 ---
 
 ## 🎨 Modules and Features
 
-<div align="center">
-  <table>
-    <tr>
-      <td width="50%">
-        <h3 align="center">1. Chronological Timeline</h3>
-        <p align="center">An interactive journey through landmark periods, from the Indus Valley to the Mughal era. Select an artifact to explore its history, materials, and cultural context.</p>
-        <img src="https://images.unsplash.com/photo-1582561424762-38b8be63d915?q=80&w=600&auto=format&fit=crop" alt="Traditional artwork detail" width="100%">
-      </td>
-      <td width="50%">
-        <h3 align="center">2. Geographical Art Map</h3>
-        <p align="center">Explore regional traditions using interactive custom markers, highlighted locations, dynamic region navigation, and switchable map appearances.</p>
-        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=600&auto=format&fit=crop" alt="Map and regional exploration" width="100%">
-      </td>
-    </tr>
-  </table>
-</div>
+| 1. Chronological Timeline | 2. Geographical Art Map |
+| :---: | :---: |
+| An interactive journey through landmark periods, from the Indus Valley to the Mughal era. Select an artifact to explore its history, materials, and cultural context. | Explore regional traditions using interactive custom markers, highlighted locations, dynamic region navigation, and switchable map appearances. |
+| ![Traditional artwork detail](https://images.unsplash.com/photo-1604871000636-074fa5117945?w=600) | ![Map and regional exploration](https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600) |
+
+<br>
 
 <div align="center">
   <h3>3. Regional Painting Fusion Studio</h3>
   <p>A generative HTML5 Canvas composition blending Warli geometry with Kalamkari floral motifs. Render new procedural variations and export an A4 collage PDF complete with artwork iterations and team metadata.</p>
-  <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop" alt="Generative art and colorful canvas motifs" width="100%">
 </div>
+
+![Generative art and colorful canvas motifs](https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?w=1200)
 
 ---
 
@@ -81,7 +69,8 @@ Indian-Art-Form-/
 
 ## 🚀 How to Clone and Run Instructions
 
-1. **Clone the Repository:** Terminal / Command Line.
+### 1. Clone the Repository
+
 Run the following git command to clone the repository onto your local machine:
 
 ```bash
@@ -89,8 +78,8 @@ git clone [https://github.com/yog-esh06/Indian-Art-Form-.git](https://github.com
 
 ```
 
+### 2. Navigate into the Directory
 
-2. **Navigate into the Directory:**
 Change your current directory to the cloned project folder:
 
 ```bash
@@ -98,18 +87,19 @@ cd Indian-Art-Form-
 
 ```
 
+### 3. Launch the Application
 
-3. **Launch the Application:**
-Since the application is built using vanilla HTML, CSS, and JS, you can open it directly in your browser:
+#### Option A: Direct Browser Launch
 
-* **Option A (Direct File Launch):**
+Since the application uses static vanilla web files, open `index.html` directly:
+
 * **Windows:** `start index.html`
 * **macOS:** `open index.html`
 * **Linux:** `xdg-open index.html`
 
+#### Option B: Local Web Server (Recommended)
 
-* **Option B (Local Web Server - Recommended):**
-Run a local server using Python to serve the static assets seamlessly:
+Run a local HTTP server using Python:
 
 ```bash
 python -m http.server 8000
@@ -117,7 +107,6 @@ python -m http.server 8000
 ```
 
 Then open `http://localhost:8000` in your web browser.
-
 
 ---
 
