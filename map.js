@@ -50,20 +50,6 @@ mapTiles.addTo(artMap);
 
 L.control.zoom({ position: "bottomright" }).addTo(artMap);
 
-const themeToggle = document.querySelector("#theme-toggle");
-const themeToggleLabel = document.querySelector("#theme-toggle-label");
-
-themeToggle.addEventListener("click", () => {
-  const useLightMode = themeToggle.getAttribute("aria-pressed") !== "true";
-  themeToggle.setAttribute("aria-pressed", String(useLightMode));
-  themeToggle.setAttribute(
-    "aria-label",
-    useLightMode ? "Switch to dark map mode" : "Switch to light map mode"
-  );
-  themeToggleLabel.textContent = useLightMode ? "Dark mode" : "Light mode";
-  document.body.classList.toggle("light-mode", useLightMode);
-});
-
 function createPlacard(entry) {
   const placard = document.createElement("article");
   placard.className = "placard";

@@ -10,11 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <script src="theme.js" defer></script>
 </head>
 <body>
   <header class="portal-header">
     <a class="portal-mark" href="index.html" aria-label="Indian Art Form home">IA<span>.</span></a>
     <p class="portal-edition">A study in living heritage <span>·</span> 2026</p>
+    <nav class="portal-nav" aria-label="Display settings">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode">
+        <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+        <span id="theme-toggle-label">Light mode</span>
+      </button>
+    </nav>
   </header>
 
   <main>

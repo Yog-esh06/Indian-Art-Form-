@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fusion.css">
+  <script src="theme.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
   <script src="fusion.js" defer></script>
 </head>
@@ -21,7 +22,13 @@
       <a href="map.html">Art map</a>
       <a class="active" href="fusion.html" aria-current="page">Studio</a>
     </nav>
-    <span class="edition-label">Open studio <span>·</span> No. 01</span>
+    <div class="studio-header-tools">
+      <span class="edition-label">Open studio <span>·</span> No. 01</span>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode">
+        <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+        <span id="theme-toggle-label">Light mode</span>
+      </button>
+    </div>
   </header>
 
   <main class="studio-main">

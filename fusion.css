@@ -99,3 +99,63 @@ body { font-size: 16px; }
   .style-notes p { max-width: 160px; font-size: 14px; }
   .studio-footer { gap: 12px; font-size: 14px; }
 }
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid rgba(212, 175, 55, .42);
+  border-radius: 3px;
+  background: rgba(212, 175, 55, .1);
+  color: #f4df9e;
+  cursor: pointer;
+  font: 600 14px/1 var(--sans);
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+.theme-toggle:hover { border-color: var(--gold); background: rgba(212, 175, 55, .19); }
+.theme-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.theme-toggle-icon { color: var(--gold); font-size: 17px; line-height: 1; }
+.light-mode {
+  color-scheme: light;
+  --paper: #211e1b;
+  --muted: #625c53;
+  background: #fdfbf7;
+  color: #211e1b;
+}
+.light-mode .studio-header,
+.light-mode .studio-footer { border-color: rgba(33, 30, 27, .14); }
+.light-mode .wordmark,
+.light-mode .studio-intro h1,
+.light-mode .style-notes h2 { color: #211e1b; }
+.light-mode .studio-nav a,
+.light-mode .edition-label,
+.light-mode .studio-intro > p:last-child,
+.light-mode .canvas-hint,
+.light-mode .style-notes p,
+.light-mode .studio-footer { color: #625c53; }
+.light-mode #download-pdf-button {
+  border-color: rgba(226, 114, 91, .7);
+  background: #f4efe7;
+  color: #211e1b;
+}
+.light-mode #download-pdf-button:hover:not(:disabled) { background: #efe4d8; }
+.light-mode .theme-toggle { background: rgba(212, 175, 55, .12); color: #65501d; }
+@media (max-width: 600px) {
+  .studio-header { gap: 12px; }
+  .studio-nav { gap: 12px; margin-left: auto; margin-right: 12px; }
+  .studio-nav .theme-toggle { min-height: 34px; padding: 0 8px; }
+  .studio-nav .theme-toggle #theme-toggle-label { display: none; }
+  .studio-header-tools { gap: 0; }
+  .studio-header-tools .edition-label { display: none; }
+}
+.studio-header-tools { display: flex; align-items: center; gap: 18px; }
+.studio-nav { margin-left: auto; margin-right: 28px; }
+@media (max-width: 420px) {
+  .studio-header { gap: 8px; padding-right: 4%; padding-left: 4%; }
+  .studio-nav { gap: 8px; margin-right: 8px; }
+  .studio-nav a { font-size: 13px; }
+  .studio-header-tools .theme-toggle { width: 36px; padding: 0; }
+}

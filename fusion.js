@@ -214,96 +214,67 @@ function downloadArtworkPdf() {
   let animationRestarted = false;
 
   try {
-    if (!window.jspdf?.jsPDF) {
+    if (!window.jspdf || !window.jspdf.jsPDF) {
       throw new Error("The PDF library could not be loaded. Check your internet connection and try again.");
     }
 
-    const imgData1 = canvas.toDataURL('image/jpeg', 1.0);
+    const imgData1 = canvas.toDataURL("image/jpeg", 1.0);
     capturedArtwork = true;
     drawArtwork(1, randomBetween(0, Math.PI * 2));
-    const imgData2 = canvas.toDataURL('image/jpeg', 1.0);
+    const imgData2 = canvas.toDataURL("image/jpeg", 1.0);
     generateSynthesis();
     animationRestarted = true;
 
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF('p', 'mm', 'a4');
+    const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
     const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const posterWidth = 280;
+    const posterHeight = posterWidth * (height / width);
+    const posterX = (pageWidth - posterWidth) / 2;
+    const posterY = (pageHeight - posterHeight) / 2;
+    if (posterWidth * posterHeight < pageWidth * pageHeight * 0.75) {
+      throw new Error("The artwork does not cover enough of the landscape page.");
+    }
 
     doc.setFillColor(253, 251, 247);
-    doc.rect(0, 0, pageWidth, 297, "F");
-    doc.setFillColor(226, 114, 91);
-    doc.circle(18, 19, 1.5, "F");
-    doc.setFillColor(212, 175, 55);
-    doc.circle(pageWidth - 18, 19, 1.5, "F");
+    doc.rect(0, 0, pageWidth, pageHeight, "F");
+    doc.addImage(imgData1, "JPEG", posterX, posterY, posterWidth, posterHeight);
+    doc.setProperties({
+      title: "Indian Art Fusion Poster",
+      subject: "Warli and Kalamkari generative artwork",
+      author: "Indian Art Form"
+    });
 
-    doc.setTextColor(38, 35, 32);
+    doc.setFillColor(33, 30, 27);
+    doc.rect(0, 0, pageWidth, 17, "F");
+    doc.rect(0, pageHeight - 18, pageWidth, 18, "F");
+
     doc.setFont("times", "bold");
-    doc.setFontSize(22);
-    doc.text("INDIAN ART FORM", pageWidth / 2, 25, { align: "center" });
-
-    doc.setDrawColor(212, 175, 55);
-    doc.setLineWidth(0.5);
-    doc.line(20, 32, 190, 32);
-
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(11);
-    doc.setTextColor(226, 114, 91);
-    doc.text("01", 20, 45);
-    doc.setTextColor(45, 42, 39);
-    doc.text("Warli", 34, 45);
-    doc.setFont("helvetica", "normal");
-    doc.setFontSize(9);
-    doc.setTextColor(112, 105, 97);
-    doc.text("Rhythm in line, circle and triangle.", 34, 53);
-    doc.setDrawColor(226, 114, 91);
-    doc.setLineWidth(0.35);
-    doc.line(20, 57, 190, 57);
-
-    doc.setFont("times", "normal");
     doc.setFontSize(16);
-    doc.setTextColor(150, 133, 107);
-    doc.text("+", pageWidth / 2, 65, { align: "center" });
-
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(11);
-    doc.setTextColor(226, 114, 91);
-    doc.text("02", 20, 75);
-    doc.setTextColor(45, 42, 39);
-    doc.text("Kalamkari", 34, 75);
+    doc.setTextColor(253, 251, 247);
+    doc.text("INDIAN ART FORM", pageWidth / 2, 7.5, { align: "center" });
     doc.setFont("helvetica", "normal");
-    doc.setFontSize(9);
-    doc.setTextColor(112, 105, 97);
-    doc.text("Vines and stories drawn by hand.", 34, 83);
-
-    const variationWidth = 85;
-    const variationHeight = variationWidth * (height / width);
-    doc.setFillColor(239, 232, 220);
-    doc.roundedRect(13, 98, 89, 68.5, 2, 2, "F");
-    doc.roundedRect(108, 98, 89, 68.5, 2, 2, "F");
-    doc.addImage(imgData1, 'JPEG', 15, 100, 85, 63.75);
-    doc.addImage(imgData2, 'JPEG', 110, 100, 85, 63.75);
-    doc.setDrawColor(212, 175, 55);
-    doc.setLineWidth(0.35);
-    doc.roundedRect(15, 100, variationWidth, variationHeight, 1, 1, "S");
-    doc.roundedRect(110, 100, variationWidth, variationHeight, 1, 1, "S");
-
-    doc.setFont("helvetica", "italic");
-    doc.setFontSize(8.5);
-    doc.setTextColor(112, 105, 97);
+    doc.setFontSize(7);
+    doc.setTextColor(212, 175, 55);
     doc.text(
-      "Generative Iterations: Displaying the synthesis of structural geometry and organic form.",
+      "WARLI: Rhythm in line, circle and triangle.  |  KALAMKARI: Vines and stories drawn by hand.",
       pageWidth / 2,
-      175,
+      13.5,
       { align: "center" }
     );
 
-    doc.setDrawColor(220, 212, 201);
-    doc.setLineWidth(0.5);
-    doc.line(20, 240, 190, 240);
-    doc.setFont("times", "bold");
-    doc.setFontSize(11);
-    doc.setTextColor(45, 42, 39);
-    doc.text("TEAM ROSTER", 20, 250);
+    const thumbnailWidth = 19;
+    const thumbnailHeight = thumbnailWidth * (height / width);
+    doc.setDrawColor(212, 175, 55);
+    doc.setLineWidth(0.35);
+    doc.addImage(imgData2, "JPEG", pageWidth - thumbnailWidth - 8, 1.5, thumbnailWidth, thumbnailHeight);
+    doc.rect(pageWidth - thumbnailWidth - 8, 1.5, thumbnailWidth, thumbnailHeight, "S");
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(7);
+    doc.setTextColor(212, 175, 55);
+    doc.text("TEAM ROSTER", 12, pageHeight - 12);
 
     const teamMembers = [
       "YOGESH R MEHTA (RA2411003010776)",
@@ -313,15 +284,16 @@ function downloadArtworkPdf() {
       "ARIEVE BALORIA (RA2411003010743)"
     ];
     doc.setFont("helvetica", "normal");
-    doc.setFontSize(8);
-    doc.setTextColor(100, 100, 100);
-    doc.text(teamMembers[0], 20, 261);
-    doc.text(teamMembers[1], 110, 261);
-    doc.text(teamMembers[2], 20, 272);
-    doc.text(teamMembers[3], 110, 272);
-    doc.text(teamMembers[4], pageWidth / 2, 283, { align: "center" });
+    doc.setFontSize(6.5);
+    doc.setTextColor(253, 251, 247);
+    doc.text(`${teamMembers[0]}   |   ${teamMembers[1]}   |   ${teamMembers[2]}`, pageWidth / 2, pageHeight - 8, { align: "center" });
+    doc.text(`${teamMembers[3]}   |   ${teamMembers[4]}`, pageWidth / 2, pageHeight - 3.5, { align: "center" });
 
-    doc.save("Indian_Art_Fusion_Collage.pdf");
+    doc.setDrawColor(212, 175, 55);
+    doc.setLineWidth(0.5);
+    doc.rect(posterX, posterY, posterWidth, posterHeight, "S");
+
+    doc.save("Indian_Art_Fusion_Poster.pdf");
     pdfStatus.textContent = "Your PDF has been downloaded.";
   } catch (error) {
     console.error("Could not export the fusion artwork as a PDF.", error);

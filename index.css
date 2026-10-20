@@ -158,3 +158,85 @@ body { font-size: 16px; }
   .project-card { min-height: 245px; padding: 20px; }
   .portal-footer { gap: 12px; font-size: 14px; }
 }
+
+.portal-nav { display: flex; align-items: center; }
+.theme-toggle {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid rgba(212, 175, 55, .42);
+  border-radius: 3px;
+  background: rgba(212, 175, 55, .1);
+  color: #f4df9e;
+  cursor: pointer;
+  font: 600 14px/1 var(--sans);
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+.theme-toggle:hover { border-color: var(--gold); background: rgba(212, 175, 55, .19); }
+.theme-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.theme-toggle-icon { color: var(--gold); font-size: 17px; line-height: 1; }
+.light-mode {
+  color-scheme: light;
+  --paper: #211e1b;
+  --muted: #625c53;
+  background: #fdfbf7;
+  color: #211e1b;
+}
+.light-mode .portal-header,
+.light-mode .portal-footer { border-color: rgba(33, 30, 27, .14); }
+.light-mode .portal-mark,
+.light-mode .hero h1 span { color: #211e1b; }
+.light-mode .portal-edition,
+.light-mode .eyebrow,
+.light-mode .mentor-attribution,
+.light-mode .hero-description,
+.light-mode .section-label > span,
+.light-mode .projects-heading > p,
+.light-mode .card-description,
+.light-mode .portal-footer { color: #625c53; }
+.light-mode .section-label h2,
+.light-mode .member-name { color: #38332e; }
+.light-mode .member-id,
+.light-mode .portal-footer span:first-child { color: #71685e; }
+.light-mode .team-list {
+  border-color: rgba(33, 30, 27, .14);
+  background: rgba(33, 30, 27, .035);
+}
+.light-mode .team-list li + li,
+.light-mode .team-list li:nth-child(even) { border-color: rgba(33, 30, 27, .12); }
+.light-mode .project-card {
+  border-color: rgba(33, 30, 27, .12);
+  background: #f4efe7;
+  color: #211e1b;
+}
+.light-mode .project-card:hover,
+.light-mode .project-card:focus-visible {
+  border-color: rgba(226, 114, 91, .82);
+  box-shadow: 0 20px 40px rgba(54, 39, 27, .18), 0 0 18px rgba(226, 114, 91, .13);
+}
+.light-mode .card-number { color: #73634d; }
+.light-mode .card-number span { color: #756c61; }
+.light-mode .timeline-icon span { background: #f4efe7; }
+.light-mode .timeline-icon span:nth-child(even) { background: var(--terracotta); }
+.light-mode .theme-toggle {
+  background: rgba(212, 175, 55, .12);
+  color: #65501d;
+}
+.portal-nav { margin-left: auto; }
+.portal-edition { margin-right: auto; margin-left: 30px; }
+.portal-header { gap: 24px; }
+@media (max-width: 760px) {
+  .portal-header { gap: 14px; }
+  .portal-edition { margin-left: auto; }
+  .portal-nav { margin-left: 0; }
+  .portal-nav .theme-toggle { min-height: 36px; padding: 0 9px; }
+}
+@media (max-width: 420px) {
+  .portal-header { gap: 8px; padding-right: 4%; padding-left: 4%; }
+  .portal-edition { font-size: 11px; letter-spacing: .04em; }
+  .portal-nav #theme-toggle-label { display: none; }
+  .portal-nav .theme-toggle { width: 38px; padding: 0; }
+}

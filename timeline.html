@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fdfbf7">
   <meta name="description" content="Explore four landmark periods in Indian art through an interactive historical timeline.">
-  <title>Art Through Time — Indian Art History</title>
+  <title>Art Through Time</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="timeline.css">
+  <script src="theme.js" defer></script>
   <script src="timeline.js" defer></script>
 </head>
 <body>
@@ -21,6 +22,10 @@
       <a href="fusion.html">Studio</a>
     </nav>
     <span class="edition-label">A living archive <span aria-hidden="true">·</span> India</span>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode">
+      <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+      <span id="theme-toggle-label">Light mode</span>
+    </button>
   </header>
 
   <main>
