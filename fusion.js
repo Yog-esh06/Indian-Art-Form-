@@ -280,7 +280,7 @@ function downloadArtworkPdf() {
       "YOGESH R MEHTA (RA2411003010776)",
       "DARSH M SARAF (RA2411003010731)",
       "MINK RANGA (RA2411003010717)",
-      "PRAKARSH AWASTHI (RA2411003010737)",
+      "PRAKARSH AWASTHI (RA2411003010736)",
       "ARIEVE BALORIA (RA2411003010743)"
     ];
     doc.setFont("helvetica", "normal");
