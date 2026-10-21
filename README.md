@@ -116,6 +116,3 @@ Then open `http://localhost:8000` in your web browser.
 | **PRAKARSH AWASTHI** | RA2411003010736 |
 | **ARIEVE BALORIA** | RA2411003010743 |
 
-```
-
-```
